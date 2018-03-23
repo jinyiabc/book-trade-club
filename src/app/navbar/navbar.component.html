@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Bookjump</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample04">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" href="allbooks">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-md-0">
+      <input class="form-control" type="text" placeholder="Search">
+    </form>
+    <ul class="navbar-nav">
+        <li class="nav-item-divider"></li>
+        <li class="nav-item"><a class="nav-link" *ngIf="!showNavBar" href="/login">Log in</a></li>
+        <li class="nav-item"><a class="nav-link" *ngIf="showNavBar" href="/login" (click)="logout()">Log out</a></li>
+        <li class="nav-item"><a class="nav-link" *ngIf="!showNavBar" href="/signup">Sign up</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="/mymodule">mymodule</a></li> -->
+        <li class="nav-item"><a class="nav-link" *ngIf="showNavBar" href="/allbooks">All books</a></li>
+        <li class="nav-item"><a class="nav-link" *ngIf="showNavBar" href="/mybooks">My books</a></li>
+        <li class="nav-item"><a class="nav-link" *ngIf="showNavBar" href="/mybooks/settings">Settings</a></li>
+
+    </ul>
+  </div>
+</nav>
+<!-- <pre>Navbar: {{isLoggedIn | async}}</pre> -->
+
+<!-- <div class="container">
+
+        <h1 class="display-1 text-bold">BookJump</h1>
+        <h5 class="text-gray-soft text-regular">The first rule of bookjump is don't talk about bookjump.</h5>
+        <form class="hero__form" action="https://themes.getbootstrap.com/shop/">
+            <div class="form-group">
+                <div class="form-group--search form-group--search--left">
+                    <input class="form-control form-control-lg form-control--rounded" name="s" type="search" id="" placeholder="Search">
+                </div>
+            </div>
+        </form>
+    </div> -->

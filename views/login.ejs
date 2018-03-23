@@ -1,0 +1,63 @@
+<h2>Login</h2>
+<form action="/login" method="post">
+	<div>
+	<label>email:</label>
+	<input type="text" name="email" autocomplete='email' /><br/>
+	</div>
+	<div>
+	<label>Password:</label>
+	<input type="password" name="password"  autocomplete="password"/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
+<h2>SingUp</h2>
+<form action="/signup" method="post">
+	<div>
+	<label>email:</label>
+	<input type="text" name="email" autocomplete='email'/><br/>
+	</div>
+	<div>
+	<label>displayName:</label>
+	<input type="text" name="displayName"/><br/>
+	</div>
+	<div>
+	<label>Password:</label>
+	<input type="password" name="password"  autocomplete="password"/>
+	</div>
+
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
+
+<h2>Update Profile</h2>
+<form action="/settings" method="post">
+	<div>
+	<label>city:</label>
+	<input type="text" name="city" autocomplete=''/><br/>
+	</div>
+	<div>
+	<label>state:</label>
+	<input type="text" name="state"/><br/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>
+
+<h2>Change Password</h2>
+<form action="/password" method="post">
+	<div>
+	<label>Current Password:</label>
+	<input type="password" name="currentPassword" autocomplete=''/><br/>
+	</div>
+	<div>
+	<label>New Password:</label>
+	<input type="password" name="newPassword"/><br/>
+	</div>
+	<div>
+	<input type="submit" value="Submit"/>
+	</div>
+</form>

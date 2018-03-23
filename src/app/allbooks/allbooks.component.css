@@ -1,0 +1,16 @@
+.cover .close {
+    float: none;
+    vertical-align: top;
+    margin-left: -40px;
+    color: #dc143c;
+    opacity: .5;
+}
+
+/* button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    margin-left: -20px;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+} */

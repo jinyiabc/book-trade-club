@@ -1,0 +1,121 @@
+<h2>My books</h2>
+<h3>{{errorMsg}}</h3>
+<!-- <ul *ngFor= "let book of myBooks">
+    <li>
+        {{book.title}}
+    </li>
+</ul> -->
+
+<!-- <form action="/addbook" method="post" class="form-signin" (submit) = "onSubmit($event)">
+      <label  class="sr-only">>Add book</label>
+      <input type="text" id="" name="title" class="form-control" placeholder="current" required="" autofocus="">
+      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Add book">
+</form> -->
+<p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Your trade requests ({{length}} outstanding)
+  </a>
+  <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+    Trade requests for you ( {{approve_length}} unapproved)
+  </button>
+</p>
+<div class="collapse row" id="collapseExample">
+
+    <h1 class="page-header">Your outstanding requests:</h1>
+
+    <ul class="list-group" *ngFor= "let book of request_list">
+      <li class="list-group-item">{{book.title}}
+          <button class="close">
+            <i class="fa fa-times" (click)="removeRequest(book)" ></i>
+          </button>
+      </li>
+    </ul>
+</div>
+
+<div class="collapse row" id="collapseExample1">
+
+    <h1 class="page-header">Requests from other users:</h1>
+
+    <ul class="list-group" *ngFor= "let book of approve_list">
+      <li class="list-group-item">{{book.title}}
+          <button class="close">
+            <i class="fa fa-times" (click)="rejectRequest(book)" ></i>
+          </button>
+          <button class="close">
+            <i class="fa fa-check" (click)="approveRequest(book)" ></i>
+          </button>
+      </li>
+    </ul>
+
+    <h1 class="page-header">Requests you've approved:</h1>
+
+    <ul class="list-group" *ngFor= "let book of approved_list">
+      <li class="list-group-item">{{book.title}}
+          <button class="close">
+            <i class="fa fa-times" (click)="cancelApprovedRequest(book)" ></i>
+          </button>
+      </li>
+    </ul>
+</div>
+
+<form  class="form-signin" #heroForm="ngForm" (ngSubmit) = "onSubmit($event)">
+    <div class="form-group">
+      <label for="name">Add book by title</label>
+      <input type="text" class="form-control" id="name" required
+        [(ngModel)]="newBook.title" name="title"
+          #title="ngModel">
+      <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+</form>
+
+
+<!-- <ul *ngFor= "let book of myBooks" class="list-group">
+    <li class="list-group-item">
+        <img src="{{book.thumbnail}}" alt="">
+        <button type="button" name="button" (click)="deleteBook(book.title)" >x</button>
+    </li>
+</ul> -->
+<div class="container">
+<div class="row">
+
+<div class="cover ng-scope" *ngFor= "let book of myBooks" >
+<a>
+    <img alt="Batman - The Complete History" src="{{book.thumbnail}}">
+    <button type="button" class="close" (click)="deleteBook(book.title)">×</button>
+</a>
+</div>
+
+
+</div>
+</div>
+<!-- <pre>isLoggedIn: {{isLoggedIn | async}}</pre> -->
+
+<!-- <div class="card-group">
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div> -->
